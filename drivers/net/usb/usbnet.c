@@ -1801,6 +1801,12 @@ usbnet_probe (struct usb_interface *udev, const struct usb_device_id *prod)
 
 	// ok, it's ready to go.
 	usb_set_intfdata (udev, dev);
+	
+	if(xdev->descriptor.idVendor == HUAWEI_VENDOR_ID){
+if( 0 != (xdev->config->desc.bmAttributes & 0x20)){
+usb_enable_autosuspend(xdev);
+}
+}
 
 	netif_device_attach (net);
 
