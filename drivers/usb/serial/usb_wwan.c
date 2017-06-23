@@ -22,6 +22,9 @@
 #define DRIVER_AUTHOR "Matthias Urlichs <smurf@smurf.noris.de>"
 #define DRIVER_DESC "USB Driver for GSM modems"
 
+#define HW_bcdUSB 0x0110
+#define HUAWEI_VENDOR_ID 0x12d1
+
 #include <linux/kernel.h>
 #include <linux/jiffies.h>
 #include <linux/errno.h>
